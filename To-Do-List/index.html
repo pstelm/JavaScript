@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Roboto:wght@400;500;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./style.css" />
+		<title>Document</title>
+		<script src="https://kit.fontawesome.com/5b996fd4be.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<button class="color-btn">Switch</button>
+
+		<div class="wrapper">
+			<div class="todo-header">
+				<h1>To Do List</h1>
+				<p class="todo-error"></p>
+				<input type="text" class="todo-input" placeholder="Add task..." />
+				<button class="add-btn">Add</button>
+			</div>
+			<div class="todo-content">
+				<ul></ul>
+			</div>
+		</div>
+
+		<div class="popup">
+			<input type="text" class="popup-input" placeholder="Edit task..." />
+			<p class="popup-error"></p>
+			<div>
+				<button class="popup-btn popup-btn--accept">Accept</button>
+				<button class="popup-btn popup-btn--cancel">Cancel</button>
+			</div>
+		</div>
+
+		<script defer src="./script.js"></script>
+	</body>
+</html>

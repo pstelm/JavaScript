@@ -1,0 +1,194 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--bg-color: #fff;
+	--txt-color: hsl(0, 0%, 0%);
+	--light-txt-color: hsla(0, 0%, 23%, 0.75);
+	--header-color: hsl(187, 36%, 70%);
+	--content-color: hsl(187, 41%, 87%);
+	--acc-color: hsl(29, 92%, 65%);
+	--tick-color: hsl(90, 87%, 40%);
+	--err-color: hsl(0, 97%, 28%);
+}
+
+.dark {
+	--bg-color: hsl(185, 23%, 11%);
+	--txt-color: hsl(0, 0%, 100%);
+	--light-txt-color: hsla(0, 0%, 100%, 0.5);
+	--header-color: hsl(186, 21%, 26%);
+	--content-color: hsl(185, 22%, 40%);
+}
+
+html {
+	font-size: 16px;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: var(--bg-color);
+	color: var(--txt-color);
+	font-family: 'Roboto', sans-serif;
+}
+
+button {
+	cursor: pointer;
+	border: none;
+	border-radius: 5px;
+	font-size: 1rem;
+	transition: box-shadow 0.3s ease-out;
+}
+
+button:hover {
+	box-shadow: inset 0 0 3px var(--light-txt-color);
+}
+
+.color-btn {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	padding: 0.5em 1.5em;
+	background-color: var(--acc-color);
+	font-family: 'Amatic SC', cursive;
+	text-transform: uppercase;
+}
+
+.wrapper {
+	width: 600px;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.todo-header {
+	padding: 2em;
+	background-color: var(--header-color);
+	text-align: center;
+}
+
+h1 {
+	margin-bottom: 0.5em;
+	font-size: 5rem;
+	font-family: 'Amatic SC', cursive;
+	font-weight: normal;
+}
+
+.todo-error,
+.popup-error {
+	color: var(--err-color);
+	margin-bottom: 0.5em;
+}
+
+.todo-input {
+	width: 80%;
+	margin-right: 1em;
+	padding: 0.5em;
+	border: none;
+	border-radius: 5px;
+	font-size: 1rem;
+}
+
+.add-btn {
+	padding: 0.5em 1.5em;
+	background-color: var(--acc-color);
+}
+
+.todo-content {
+	padding: 2em;
+	background-color: var(--content-color);
+}
+
+ul {
+	list-style: none;
+}
+
+.task {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-left: 0.5em;
+	border-bottom: 1px solid var(--light-txt-color);
+}
+
+.task:last-child {
+	border-bottom: none;
+}
+
+.task-controls {
+	display: flex;
+	align-items: center;
+}
+
+.check-btn,
+.edit-btn,
+.delete-btn {
+	margin: 0;
+	padding: 0.5em;
+	background-color: transparent;
+}
+
+.check-btn {
+	color: var(--tick-color);
+}
+
+.edit-btn {
+	color: var(--light-txt-color);
+	text-transform: uppercase;
+}
+
+.delete-btn {
+	color: var(--err-color);
+}
+
+.fa-solid {
+	pointer-events: none;
+}
+
+.checked {
+	text-decoration: line-through;
+	color: var(--light-txt-color);
+}
+
+.popup {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 300px;
+	padding: 20px;
+	background-color: var(--acc-color);
+	color: var(--txt-color);
+	border-radius: 10px;
+}
+
+.popup-input {
+	width: 100%;
+	margin-bottom: 1em;
+	padding: 0.5em;
+	border: none;
+	border-radius: 5px;
+	font-size: 1rem;
+}
+
+.popup div {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.popup-btn {
+	padding: 0.5em 1.5em;
+	background-color: var(--content-color);
+	color: var(--txt-color);
+}
